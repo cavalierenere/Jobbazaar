@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Colleagues - Job Bazaar</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    :root {
+      --navy: #1a2340;
+      --yellow: #ffe066;
+      --grey: #f5f6fa;
+      --card-shadow: 0 2px 12px rgba(26,35,64,0.08);
+    }
+    .colleagues-section {
+      max-width: 1200px;
+      margin: 2.5rem auto 2rem auto;
+      padding: 0 1rem;
+    }
+    .colleagues-title-bar {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.2rem;
+      margin-bottom: 2.2rem;
+    }
+    .colleagues-title-bar h1 {
+      font-size: 2.2rem;
+      font-weight: 800;
+      color: var(--navy);
+      margin: 0;
+      letter-spacing: 0.01em;
+    }
+    .colleagues-search-bar {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: var(--card-shadow);
+      padding: 1.2rem 1rem 1rem 1rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      width: 100%;
+      max-width: 700px;
+      align-items: center;
+      justify-content: center;
+    }
+    .colleagues-search-bar label {
+      font-weight: 600;
+      color: var(--navy);
+      margin-right: 0.5rem;
+    }
+    .colleagues-search-bar input,
+    .colleagues-search-bar select {
+      min-width: 120px;
+      font-size: 1rem;
+      border-radius: 8px;
+      border: 1.5px solid var(--yellow);
+      padding: 0.6em 1em;
+      background: var(--grey);
+      color: var(--navy);
+      margin-right: 0.5rem;
+      margin-bottom: 0.2rem;
+      outline: none;
+      transition: border 0.2s, box-shadow 0.2s;
+    }
+    .colleagues-search-bar input:focus,
+    .colleagues-search-bar select:focus {
+      border: 2px solid var(--yellow);
+      box-shadow: 0 0 0 2px var(--yellow);
+    }
+    .colleagues-search-bar button {
+      background: var(--navy);
+      color: var(--yellow);
+      font-weight: 700;
+      border: none;
+      border-radius: 8px;
+      padding: 0.6em 1.5em;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.18s, color 0.18s;
+    }
+    .colleagues-search-bar button:hover,
+    .colleagues-search-bar button:focus {
+      background: var(--yellow);
+      color: var(--navy);
+    }
+    .colleagues-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 2rem;
+      margin-top: 1.5rem;
+      min-height: 320px;
+      justify-items: center;
+      justify-content: center;
+    }
+    .colleague-card {
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: var(--card-shadow);
+      padding: 1.5rem 1.2rem 1.2rem 1.2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      min-height: 260px;
+      min-width: 260px;
+      max-width: 340px;
+      width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+      border: 1.5px solid var(--grey);
+      transition: box-shadow 0.18s, border 0.18s, transform 0.18s;
+    }
+    .colleague-card:focus-within, .colleague-card:hover {
+      box-shadow: 0 8px 32px rgba(26,35,64,0.13);
+      border: 1.5px solid var(--yellow);
+      transform: translateY(-3px) scale(1.025);
+    }
+    .colleague-avatar {
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid var(--yellow);
+      box-shadow: 0 2px 8px rgba(255,224,102,0.13);
+      margin-bottom: 1rem;
+      background: #fff;
+    }
+    .colleague-name {
+      font-weight: 700;
+      font-size: 1.13rem;
+      color: var(--navy);
+      margin-bottom: 0.2rem;
+    }
+    .colleague-specialty {
+      display: inline-block;
+      background: var(--yellow);
+      color: var(--navy);
+      font-weight: 600;
+      border-radius: 999px;
+      padding: 0.18em 1em;
+      font-size: 0.97rem;
+      margin-bottom: 0.5rem;
+      margin-top: 0.1rem;
+      letter-spacing: 0.01em;
+    }
+    .colleague-location {
+      font-size: 0.97rem;
+      color: #666;
+      margin-bottom: 0.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.3em;
+    }
+    .colleague-desc {
+      font-size: 0.98rem;
+      color: #222;
+      margin-bottom: 1.1rem;
+      min-height: 38px;
+    }
+    .colleague-contact-btn {
+      background: var(--navy);
+      color: var(--yellow);
+      font-weight: 700;
+      border: none;
+      border-radius: 999px;
+      padding: 0.6em 1.5em;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.18s, color 0.18s;
+      margin-top: auto;
+    }
+    .colleague-contact-btn:hover,
+    .colleague-contact-btn:focus {
+      background: var(--yellow);
+      color: var(--navy);
+    }
+    @media (max-width: 700px) {
+      .colleagues-section {
+        padding: 0 0.2rem;
+      }
+      .colleagues-title-bar h1 {
+        font-size: 1.4rem;
+      }
+      .colleagues-search-bar {
+        padding: 0.7rem 0.2rem 0.7rem 0.2rem;
+        gap: 0.5rem;
+      }
+      .colleagues-grid {
+        gap: 1rem;
+      }
+      .colleague-card {
+        padding: 1rem 0.5rem 1rem 0.5rem;
+        min-height: 180px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="main-header" role="banner">
+    <div class="header-content">
+      <div class="logo" aria-label="Job Bazaar logo"><a href="index.html" aria-label="Go to Home page" style="text-decoration:none;color:inherit;">Job <span class="logo-accent">Bazaar</span></a></div>
+      <nav aria-label="Main navigation" role="navigation">
+        <ul>
+          <li><a href="index.html#categories" tabindex="0" aria-label="Go to Services section">Services</a></li>
+          <li><a href="index.html#project-estimator" id="estimator-tab" tabindex="0" aria-label="Get a Quote">Get a Quote</a></li>
+          <li><a href="colleagues.html" tabindex="0" aria-label="Our Colleagues" class="active">Our Colleagues</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main id="main-content" tabindex="-1">
+    <section class="colleagues-section" aria-labelledby="colleagues-title">
+      <div class="colleagues-title-bar">
+        <h1 id="colleagues-title">Our Colleagues</h1>
+        <form class="colleagues-search-bar" id="colleagues-search-form" role="search" aria-label="Search colleagues">
+          <label for="search-location">Location</label>
+          <input type="text" id="search-location" name="location" placeholder="Postcode, city..." autocomplete="off" aria-label="Search by location">
+          <label for="search-specialty">Specialty</label>
+          <select id="search-specialty" name="specialty" aria-label="Search by specialty">
+            <option value="">All</option>
+            <option value="Builder">Builder</option>
+            <option value="Plumber">Plumber</option>
+            <option value="Electrician">Electrician</option>
+            <option value="Cleaner">Cleaner</option>
+            <option value="Carpenter">Carpenter</option>
+            <option value="Gardener">Gardener</option>
+            <option value="Roofer">Roofer</option>
+            <option value="Painter">Painter</option>
+            <option value="Handyman">Handyman</option>
+            <option value="Tiler">Tiler</option>
+            <option value="Plasterer">Plasterer</option>
+          </select>
+          <button type="submit">Search</button>
+        </form>
+      </div>
+      <div class="colleagues-grid" id="colleagues-grid" role="list">
+        <!-- Cards will be rendered here by JS -->
+      </div>
+    </section>
+  </main>
+  <footer role="contentinfo">
+    <div class="footer-content">
+      <div class="footer-logo">Job <span class="logo-accent">Bazaar</span></div>
+      <div class="footer-links">
+        <a href="#" aria-label="About">About</a>
+        <a href="#" aria-label="Contact">Contact</a>
+        <a href="#" aria-label="Terms">Terms</a>
+        <a href="#" aria-label="Privacy">Privacy</a>
+      </div>
+      <div class="footer-copy">&copy; 2025 Job Bazaar. All rights reserved.</div>
+    </div>
+  </footer>
+  <script>
+    // Colleagues data
+    const colleagues = [
+      {
+        name: "Ali M.",
+        specialty: "Builder",
+        location: "London",
+        avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=Ali%20M.%20Builder",
+        desc: "Experienced builder specializing in home extensions and renovations."
+      },
+      {
+        name: "Sara K.",
+        specialty: "Plumber",
+        location: "Manchester",
+        avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=Sara%20K.%20Plumber",
+        desc: "Reliable plumber for bathrooms, kitchens, and repairs."
+      },
+      {
+        name: "Reza T.",
+        specialty: "Electrician",
+        location: "Birmingham",
+        avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=Reza%20T.%20Electrician",
+        desc: "Certified electrician for domestic and commercial projects."
+      },
+      {
+        name: "Maryam S.",
+        specialty: "Cleaner",
+        location: "Liverpool",
+        avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=Maryam%20S.%20Cleaner",
+        desc: "Professional cleaner for homes and offices, attention to detail."
+      },
+      {
+        name: "Omid D.",
+        specialty: "Carpenter",
+        location: "Leeds",
+        avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=Omid%20D.%20Carpenter",
+        desc: "Custom woodwork, furniture, and repairs with a personal touch."
+      },
+      {
+        name: "Fatemeh R.",
+        specialty: "Gardener",
+        location: "Bristol",
+        avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=Fatemeh%20R.%20Gardener",
+        desc: "Garden design, maintenance, and landscaping specialist."
+      },
+      {
+        name: "Hossein B.",
+        specialty: "Roofer",
+        location: "Sheffield",
+        avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=Hossein%20B.%20Roofer",
+        desc: "Roof repairs, new installations, and leak detection expert."
+      },
+      {
+        name: "Leila N.",
+        specialty: "Painter",
+        location: "Glasgow",
+        avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=Leila%20N.%20Painter",
+        desc: "Interior and exterior painting with a focus on quality finishes."
+      },
+      {
+        name: "Mohammad A.",
+        specialty: "Handyman",
+        location: "Edinburgh",
+        avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=Mohammad%20A.%20Handyman",
+        desc: "General repairs, maintenance, and odd jobs done right."
+      },
+      {
+        name: "Zahra J.",
+        specialty: "Cleaner",
+        location: "Cardiff",
+        avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=Zahra%20J.%20Cleaner",
+        desc: "Efficient and trustworthy cleaning for homes and businesses."
+      },
+      {
+        name: "Emily W.",
+        specialty: "Tiler",
+        location: "Brighton",
+        avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=Emily%20W.%20Tiler",
+        desc: "Expert tiler for kitchens, bathrooms, and floors."
+      },
+      {
+        name: "James P.",
+        specialty: "Plasterer",
+        location: "Nottingham",
+        avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=James%20P.%20Plasterer",
+        desc: "Smooth plastering and rendering for a perfect finish."
+      }
+    ];
+
+    function renderColleagues(list) {
+      const grid = document.getElementById('colleagues-grid');
+      grid.innerHTML = '';
+      if (!list.length) {
+        grid.innerHTML = '<div style="grid-column:1/-1;text-align:center;color:#888;font-size:1.1rem;padding:2rem 0;">No colleagues found for your search.</div>';
+        return;
+      }
+      for (const c of list) {
+        const card = document.createElement('div');
+        card.className = 'colleague-card';
+        card.setAttribute('role', 'listitem');
+        card.tabIndex = 0;
+        card.innerHTML = `
+          <img class="colleague-avatar" src="${c.avatar}" alt="${c.name} avatar">
+          <div class="colleague-name">${c.name}</div>
+          <span class="colleague-specialty">${c.specialty}</span>
+          <div class="colleague-location"><span class="icon" aria-hidden="true">📍</span>${c.location}</div>
+          <div class="colleague-desc">${c.desc}</div>
+          <button class="colleague-contact-btn" aria-label="Contact ${c.name}">Contact</button>
+        `;
+        grid.appendChild(card);
+      }
+    }
+
+    // Autocomplete for specialties
+    const specialties = [
+      "Builder", "Plumber", "Electrician", "Cleaner", "Carpenter", "Gardener", "Roofer", "Painter", "Handyman"
+    ];
+    // Simple location autocomplete (for demo, use unique locations from colleagues)
+    const locations = Array.from(new Set(colleagues.map(c => c.location)));
+    const locationInput = document.getElementById('search-location');
+    locationInput.addEventListener('input', function() {
+      const val = this.value.toLowerCase();
+      this.setAttribute('list', 'location-list');
+      let datalist = document.getElementById('location-list');
+      if (!datalist) {
+        datalist = document.createElement('datalist');
+        datalist.id = 'location-list';
+        this.parentNode.appendChild(datalist);
+      }
+      datalist.innerHTML = '';
+      for (const loc of locations) {
+        if (!val || loc.toLowerCase().includes(val)) {
+          const opt = document.createElement('option');
+          opt.value = loc;
+          datalist.appendChild(opt);
+        }
+      }
+    });
+
+    // Filtering logic
+    document.getElementById('colleagues-search-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const loc = locationInput.value.trim().toLowerCase();
+      const spec = document.getElementById('search-specialty').value;
+      const filtered = colleagues.filter(c => {
+        const matchLoc = !loc || c.location.toLowerCase().includes(loc);
+        const matchSpec = !spec || c.specialty === spec;
+        return matchLoc && matchSpec;
+      });
+      renderColleagues(filtered);
+    });
+
+    // Initial render
+    // If ?service= param, pre-select and filter
+    const urlParams = new URLSearchParams(window.location.search);
+    const serviceParam = urlParams.get('service');
+    if (serviceParam) {
+      document.getElementById('search-specialty').value = capitalize(serviceParam);
+      renderColleagues(colleagues.filter(c => c.specialty.toLowerCase() === serviceParam.toLowerCase()));
+    } else {
+      renderColleagues(colleagues);
+    }
+    function capitalize(str) {
+      return str.charAt(0).toUpperCase() + str.slice(1);
+    }
+  </script>
+</body>
+</html> 

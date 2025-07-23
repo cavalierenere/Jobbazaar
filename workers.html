@@ -7,146 +7,149 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="main-header">
+  <header class="main-header" role="banner">
     <div class="header-content">
-      <div class="logo">Job <span class="logo-accent">Bazaar</span></div>
-      <nav>
+      <div class="logo" aria-label="Job Bazaar logo">Job <span class="logo-accent">Bazaar</span></div>
+      <nav aria-label="Main navigation" role="navigation">
         <ul>
-          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html" aria-label="Go to Home page">Home</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <section class="featured-workers" id="featured-workers">
-    <h2>Browse Workers</h2>
-    <div class="workers-grid">
-      <div class="worker-card-modern" data-worker="ali-m">
-        <div class="worker-card-img"><img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Ali%20M.%20Builder" alt="Ali M. avatar"></div>
-        <div class="worker-card-body">
-          <div class="worker-card-title">Ali M. <span class="worker-job">Builder</span></div>
-          <div class="worker-card-meta">
-            <span class="badge"><span class="icon">📍</span>London</span>
-            <span class="badge"><span class="icon">★</span>4.9</span>
+  <main id="main-content" tabindex="-1">
+    <section class="featured-workers" id="featured-workers" aria-labelledby="featured-workers-title">
+      <h2 id="featured-workers-title">Browse Workers</h2>
+      <div class="workers-grid" role="list">
+        <!-- Each worker card -->
+        <div class="worker-card-modern" data-worker="ali-m" role="listitem" tabindex="0" aria-label="Ali M. Builder, London, 4.9 stars">
+          <div class="worker-card-img"><img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Ali%20M.%20Builder" alt="Ali M. avatar"></div>
+          <div class="worker-card-body">
+            <div class="worker-card-title">Ali M. <span class="worker-job">Builder</span></div>
+            <div class="worker-card-meta">
+              <span class="badge"><span class="icon" aria-hidden="true">📍</span>London</span>
+              <span class="badge"><span class="icon" aria-hidden="true">★</span>4.9</span>
+            </div>
+            <button class="profile-btn" data-worker="ali-m" aria-label="View profile of Ali M, Builder">View Profile</button>
           </div>
-          <button class="profile-btn" data-worker="ali-m">View Profile</button>
+        </div>
+        <div class="worker-card-modern" data-worker="sara-k" role="listitem" tabindex="0" aria-label="Sara K. Plumber, Manchester, 4.8 stars">
+          <div class="worker-card-img"><img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Sara%20K.%20Plumber" alt="Sara K. avatar"></div>
+          <div class="worker-card-body">
+            <div class="worker-card-title">Sara K. <span class="worker-job">Plumber</span></div>
+            <div class="worker-card-meta">
+              <span class="badge"><span class="icon" aria-hidden="true">📍</span>Manchester</span>
+              <span class="badge"><span class="icon" aria-hidden="true">★</span>4.8</span>
+            </div>
+            <button class="profile-btn" data-worker="sara-k" aria-label="View profile of Sara K, Plumber">View Profile</button>
+          </div>
+        </div>
+        <div class="worker-card-modern" data-worker="reza-t" role="listitem" tabindex="0" aria-label="Reza T. Electrician, Birmingham, 4.7 stars">
+          <div class="worker-card-img"><img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Reza%20T.%20Electrician" alt="Reza T. avatar"></div>
+          <div class="worker-card-body">
+            <div class="worker-card-title">Reza T. <span class="worker-job">Electrician</span></div>
+            <div class="worker-card-meta">
+              <span class="badge"><span class="icon" aria-hidden="true">📍</span>Birmingham</span>
+              <span class="badge"><span class="icon" aria-hidden="true">★</span>4.7</span>
+            </div>
+            <button class="profile-btn" data-worker="reza-t" aria-label="View profile of Reza T, Electrician">View Profile</button>
+          </div>
+        </div>
+        <div class="worker-card-modern" data-worker="maryam-s" role="listitem" tabindex="0" aria-label="Maryam S. Cleaner, Liverpool, 4.9 stars">
+          <div class="worker-card-img"><img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Maryam%20S.%20Cleaner" alt="Maryam S. avatar"></div>
+          <div class="worker-card-body">
+            <div class="worker-card-title">Maryam S. <span class="worker-job">Cleaner</span></div>
+            <div class="worker-card-meta">
+              <span class="badge"><span class="icon" aria-hidden="true">📍</span>Liverpool</span>
+              <span class="badge"><span class="icon" aria-hidden="true">★</span>4.9</span>
+            </div>
+            <button class="profile-btn" data-worker="maryam-s" aria-label="View profile of Maryam S, Cleaner">View Profile</button>
+          </div>
+        </div>
+        <div class="worker-card-modern" data-worker="omid-d" role="listitem" tabindex="0" aria-label="Omid D. Carpenter, Leeds, 4.8 stars">
+          <div class="worker-card-img"><img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Omid%20D.%20Carpenter" alt="Omid D. avatar"></div>
+          <div class="worker-card-body">
+            <div class="worker-card-title">Omid D. <span class="worker-job">Carpenter</span></div>
+            <div class="worker-card-meta">
+              <span class="badge"><span class="icon" aria-hidden="true">📍</span>Leeds</span>
+              <span class="badge"><span class="icon" aria-hidden="true">★</span>4.8</span>
+            </div>
+            <button class="profile-btn" data-worker="omid-d" aria-label="View profile of Omid D, Carpenter">View Profile</button>
+          </div>
+        </div>
+        <div class="worker-card-modern" data-worker="fatemeh-r" role="listitem" tabindex="0" aria-label="Fatemeh R. Gardener, Bristol, 4.7 stars">
+          <div class="worker-card-img"><img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Fatemeh%20R.%20Gardener" alt="Fatemeh R. avatar"></div>
+          <div class="worker-card-body">
+            <div class="worker-card-title">Fatemeh R. <span class="worker-job">Gardener</span></div>
+            <div class="worker-card-meta">
+              <span class="badge"><span class="icon" aria-hidden="true">📍</span>Bristol</span>
+              <span class="badge"><span class="icon" aria-hidden="true">★</span>4.7</span>
+            </div>
+            <button class="profile-btn" data-worker="fatemeh-r" aria-label="View profile of Fatemeh R, Gardener">View Profile</button>
+          </div>
+        </div>
+        <div class="worker-card-modern" data-worker="hossein-b" role="listitem" tabindex="0" aria-label="Hossein B. Roofer, Sheffield, 4.6 stars">
+          <div class="worker-card-img"><img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Hossein%20B.%20Roofer" alt="Hossein B. avatar"></div>
+          <div class="worker-card-body">
+            <div class="worker-card-title">Hossein B. <span class="worker-job">Roofer</span></div>
+            <div class="worker-card-meta">
+              <span class="badge"><span class="icon" aria-hidden="true">📍</span>Sheffield</span>
+              <span class="badge"><span class="icon" aria-hidden="true">★</span>4.6</span>
+            </div>
+            <button class="profile-btn" data-worker="hossein-b" aria-label="View profile of Hossein B, Roofer">View Profile</button>
+          </div>
+        </div>
+        <div class="worker-card-modern" data-worker="leila-n" role="listitem" tabindex="0" aria-label="Leila N. Painter, Glasgow, 4.9 stars">
+          <div class="worker-card-img"><img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Leila%20N.%20Painter" alt="Leila N. avatar"></div>
+          <div class="worker-card-body">
+            <div class="worker-card-title">Leila N. <span class="worker-job">Painter</span></div>
+            <div class="worker-card-meta">
+              <span class="badge"><span class="icon" aria-hidden="true">📍</span>Glasgow</span>
+              <span class="badge"><span class="icon" aria-hidden="true">★</span>4.9</span>
+            </div>
+            <button class="profile-btn" data-worker="leila-n" aria-label="View profile of Leila N, Painter">View Profile</button>
+          </div>
+        </div>
+        <div class="worker-card-modern" data-worker="mohammad-a" role="listitem" tabindex="0" aria-label="Mohammad A. Handyman, Edinburgh, 4.8 stars">
+          <div class="worker-card-img"><img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Mohammad%20A.%20Handyman" alt="Mohammad A. avatar"></div>
+          <div class="worker-card-body">
+            <div class="worker-card-title">Mohammad A. <span class="worker-job">Handyman</span></div>
+            <div class="worker-card-meta">
+              <span class="badge"><span class="icon" aria-hidden="true">📍</span>Edinburgh</span>
+              <span class="badge"><span class="icon" aria-hidden="true">★</span>4.8</span>
+            </div>
+            <button class="profile-btn" data-worker="mohammad-a" aria-label="View profile of Mohammad A, Handyman">View Profile</button>
+          </div>
+        </div>
+        <div class="worker-card-modern" data-worker="zahra-j" role="listitem" tabindex="0" aria-label="Zahra J. Cleaner, Cardiff, 4.7 stars">
+          <div class="worker-card-img"><img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Zahra%20J.%20Cleaner" alt="Zahra J. avatar"></div>
+          <div class="worker-card-body">
+            <div class="worker-card-title">Zahra J. <span class="worker-job">Cleaner</span></div>
+            <div class="worker-card-meta">
+              <span class="badge"><span class="icon" aria-hidden="true">📍</span>Cardiff</span>
+              <span class="badge"><span class="icon" aria-hidden="true">★</span>4.7</span>
+            </div>
+            <button class="profile-btn" data-worker="zahra-j" aria-label="View profile of Zahra J, Cleaner">View Profile</button>
+          </div>
         </div>
       </div>
-      <div class="worker-card-modern" data-worker="sara-k">
-        <div class="worker-card-img"><img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Sara%20K.%20Plumber" alt="Sara K. avatar"></div>
-        <div class="worker-card-body">
-          <div class="worker-card-title">Sara K. <span class="worker-job">Plumber</span></div>
-          <div class="worker-card-meta">
-            <span class="badge"><span class="icon">📍</span>Manchester</span>
-            <span class="badge"><span class="icon">★</span>4.8</span>
-          </div>
-          <button class="profile-btn" data-worker="sara-k">View Profile</button>
-        </div>
-      </div>
-      <div class="worker-card-modern" data-worker="reza-t">
-        <div class="worker-card-img"><img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Reza%20T.%20Electrician" alt="Reza T. avatar"></div>
-        <div class="worker-card-body">
-          <div class="worker-card-title">Reza T. <span class="worker-job">Electrician</span></div>
-          <div class="worker-card-meta">
-            <span class="badge"><span class="icon">📍</span>Birmingham</span>
-            <span class="badge"><span class="icon">★</span>4.7</span>
-          </div>
-          <button class="profile-btn" data-worker="reza-t">View Profile</button>
-        </div>
-      </div>
-      <div class="worker-card-modern" data-worker="maryam-s">
-        <div class="worker-card-img"><img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Maryam%20S.%20Cleaner" alt="Maryam S. avatar"></div>
-        <div class="worker-card-body">
-          <div class="worker-card-title">Maryam S. <span class="worker-job">Cleaner</span></div>
-          <div class="worker-card-meta">
-            <span class="badge"><span class="icon">📍</span>Liverpool</span>
-            <span class="badge"><span class="icon">★</span>4.9</span>
-          </div>
-          <button class="profile-btn" data-worker="maryam-s">View Profile</button>
-        </div>
-      </div>
-      <div class="worker-card-modern" data-worker="omid-d">
-        <div class="worker-card-img"><img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Omid%20D.%20Carpenter" alt="Omid D. avatar"></div>
-        <div class="worker-card-body">
-          <div class="worker-card-title">Omid D. <span class="worker-job">Carpenter</span></div>
-          <div class="worker-card-meta">
-            <span class="badge"><span class="icon">📍</span>Leeds</span>
-            <span class="badge"><span class="icon">★</span>4.8</span>
-          </div>
-          <button class="profile-btn" data-worker="omid-d">View Profile</button>
-        </div>
-      </div>
-      <div class="worker-card-modern" data-worker="fatemeh-r">
-        <div class="worker-card-img"><img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Fatemeh%20R.%20Gardener" alt="Fatemeh R. avatar"></div>
-        <div class="worker-card-body">
-          <div class="worker-card-title">Fatemeh R. <span class="worker-job">Gardener</span></div>
-          <div class="worker-card-meta">
-            <span class="badge"><span class="icon">📍</span>Bristol</span>
-            <span class="badge"><span class="icon">★</span>4.7</span>
-          </div>
-          <button class="profile-btn" data-worker="fatemeh-r">View Profile</button>
-        </div>
-      </div>
-      <div class="worker-card-modern" data-worker="hossein-b">
-        <div class="worker-card-img"><img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Hossein%20B.%20Roofer" alt="Hossein B. avatar"></div>
-        <div class="worker-card-body">
-          <div class="worker-card-title">Hossein B. <span class="worker-job">Roofer</span></div>
-          <div class="worker-card-meta">
-            <span class="badge"><span class="icon">📍</span>Sheffield</span>
-            <span class="badge"><span class="icon">★</span>4.6</span>
-          </div>
-          <button class="profile-btn" data-worker="hossein-b">View Profile</button>
-        </div>
-      </div>
-      <div class="worker-card-modern" data-worker="leila-n">
-        <div class="worker-card-img"><img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Leila%20N.%20Painter" alt="Leila N. avatar"></div>
-        <div class="worker-card-body">
-          <div class="worker-card-title">Leila N. <span class="worker-job">Painter</span></div>
-          <div class="worker-card-meta">
-            <span class="badge"><span class="icon">📍</span>Glasgow</span>
-            <span class="badge"><span class="icon">★</span>4.9</span>
-          </div>
-          <button class="profile-btn" data-worker="leila-n">View Profile</button>
-        </div>
-      </div>
-      <div class="worker-card-modern" data-worker="mohammad-a">
-        <div class="worker-card-img"><img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Mohammad%20A.%20Handyman" alt="Mohammad A. avatar"></div>
-        <div class="worker-card-body">
-          <div class="worker-card-title">Mohammad A. <span class="worker-job">Handyman</span></div>
-          <div class="worker-card-meta">
-            <span class="badge"><span class="icon">📍</span>Edinburgh</span>
-            <span class="badge"><span class="icon">★</span>4.8</span>
-          </div>
-          <button class="profile-btn" data-worker="mohammad-a">View Profile</button>
-        </div>
-      </div>
-      <div class="worker-card-modern" data-worker="zahra-j">
-        <div class="worker-card-img"><img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Zahra%20J.%20Cleaner" alt="Zahra J. avatar"></div>
-        <div class="worker-card-body">
-          <div class="worker-card-title">Zahra J. <span class="worker-job">Cleaner</span></div>
-          <div class="worker-card-meta">
-            <span class="badge"><span class="icon">📍</span>Cardiff</span>
-            <span class="badge"><span class="icon">★</span>4.7</span>
-          </div>
-          <button class="profile-btn" data-worker="zahra-j">View Profile</button>
-        </div>
-      </div>
-    </div>
-  </section>
+    </section>
+  </main>
 
   <!-- Modal Overlay for Profile -->
   <div id="profile-modal-overlay" class="profile-modal-overlay hidden">
     <div id="profile-modal-panel" class="profile-modal-panel"></div>
   </div>
 
-  <footer>
+  <footer role="contentinfo">
     <div class="footer-content">
       <div class="footer-logo">Job <span class="logo-accent">Bazaar</span></div>
       <div class="footer-links">
-        <a href="#">About</a>
-        <a href="#">Contact</a>
-        <a href="#">Terms</a>
-        <a href="#">Privacy</a>
+        <a href="#" aria-label="About">About</a>
+        <a href="#" aria-label="Contact">Contact</a>
+        <a href="#" aria-label="Terms">Terms</a>
+        <a href="#" aria-label="Privacy">Privacy</a>
       </div>
       <div class="footer-copy">&copy; 2025 Job Bazaar. All rights reserved.</div>
     </div>
@@ -274,8 +277,8 @@
               <h2>${worker.name}</h2>
               <div class="profile-job">${worker.job}</div>
               <div class="profile-meta">
-                <span class="badge"><span class="icon">📍</span>${worker.location}</span>
-                <span class="badge"><span class="icon">★</span>${worker.rating}</span>
+                <span class="badge"><span class="icon" aria-hidden="true">📍</span>${worker.location}</span>
+                <span class="badge"><span class="icon" aria-hidden="true">★</span>${worker.rating}</span>
               </div>
               <p class="profile-bio">${worker.bio}</p>
             </div>
