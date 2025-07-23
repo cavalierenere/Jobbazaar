@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Job Bazaar - Find Trusted Professionals</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="main-header">
+    <div class="header-content">
+      <div class="logo">Job <span class="logo-accent">Bazaar</span></div>
+      <nav>
+        <ul>
+          <li><a href="#categories">Services</a></li>
+          <li><a href="#how-it-works">How it Works</a></li>
+          <li><a href="#testimonials">Testimonials</a></li>
+          <li><a href="#project-estimator" id="estimator-tab">Estimate My Project</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <h1>Find the perfect professional for you</h1>
+    <p>Get free quotes within minutes</p>
+    <form class="search-form" autocomplete="off" onsubmit="return false;">
+      <input type="text" id="service-search" placeholder="What service do you need?">
+      <button type="submit">Search</button>
+    </form>
+    <a href="workers.html" class="cta-button" style="margin-top:1.2rem;display:inline-block;">Browse Workers</a>
+  </section>
+
+  <!-- POPULAR CATEGORIES -->
+  <section class="categories" id="categories">
+    <h2>Popular Construction Services</h2>
+    <div class="category-grid" id="category-grid">
+      <div class="category-tile" data-name="Builder">
+        <div class="cat-icon cat-builder"></div>
+        <span>Builder</span>
+      </div>
+      <div class="category-tile" data-name="Roofer">
+        <div class="cat-icon cat-roof"></div>
+        <span>Roofer</span>
+      </div>
+      <div class="category-tile" data-name="Plumber">
+        <div class="cat-icon cat-plumber"></div>
+        <span>Plumber</span>
+      </div>
+      <div class="category-tile" data-name="Electrician">
+        <div class="cat-icon cat-electrician"></div>
+        <span>Electrician</span>
+      </div>
+      <div class="category-tile" data-name="Carpenter">
+        <div class="cat-icon cat-carpenter"></div>
+        <span>Carpenter</span>
+      </div>
+      <div class="category-tile" data-name="Handyman">
+        <div class="cat-icon cat-handyman"></div>
+        <span>Handyman</span>
+      </div>
+      <div class="category-tile" data-name="Painter">
+        <div class="cat-icon cat-painter"></div>
+        <span>Painter</span>
+      </div>
+      <div class="category-tile" data-name="Gardener">
+        <div class="cat-icon cat-gardener"></div>
+        <span>Gardener</span>
+      </div>
+      <div class="category-tile" data-name="Cleaner">
+        <div class="cat-icon cat-cleaner"></div>
+        <span>Cleaner</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURED WORKERS -->
+  <section class="featured-workers" id="featured-workers">
+    <h2>Featured Workers</h2>
+    <div class="workers-grid">
+      <div class="worker-card-modern" data-keywords="ali m builder london 4.9">
+        <div class="worker-card-img"><img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Ali%20M.%20Builder" alt="Ali M. avatar"></div>
+        <div class="worker-card-body">
+          <div class="worker-card-title">Ali M. <span class="worker-job">Builder</span></div>
+          <div class="worker-card-meta">
+            <span class="badge"><span class="icon">📍</span>London</span>
+            <span class="badge"><span class="icon">★</span>4.9</span>
+          </div>
+          <button class="profile-btn" onclick="window.location.href='profile-ali-m.html'">View Profile</button>
+        </div>
+      </div>
+      <div class="worker-card-modern" data-keywords="sara k plumber manchester 4.8">
+        <div class="worker-card-img"><img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Sara%20K.%20Plumber" alt="Sara K. avatar"></div>
+        <div class="worker-card-body">
+          <div class="worker-card-title">Sara K. <span class="worker-job">Plumber</span></div>
+          <div class="worker-card-meta">
+            <span class="badge"><span class="icon">📍</span>Manchester</span>
+            <span class="badge"><span class="icon">★</span>4.8</span>
+          </div>
+          <button class="profile-btn" onclick="window.location.href='profile-sara-k.html'">View Profile</button>
+        </div>
+      </div>
+      <div class="worker-card-modern" data-keywords="reza t electrician birmingham 4.7">
+        <div class="worker-card-img"><img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Reza%20T.%20Electrician" alt="Reza T. avatar"></div>
+        <div class="worker-card-body">
+          <div class="worker-card-title">Reza T. <span class="worker-job">Electrician</span></div>
+          <div class="worker-card-meta">
+            <span class="badge"><span class="icon">📍</span>Birmingham</span>
+            <span class="badge"><span class="icon">★</span>4.7</span>
+          </div>
+          <button class="profile-btn" onclick="window.location.href='profile-reza-t.html'">View Profile</button>
+        </div>
+      </div>
+      <div class="worker-card-modern" data-keywords="maryam s cleaner liverpool 4.9">
+        <div class="worker-card-img"><img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Maryam%20S.%20Cleaner" alt="Maryam S. avatar"></div>
+        <div class="worker-card-body">
+          <div class="worker-card-title">Maryam S. <span class="worker-job">Cleaner</span></div>
+          <div class="worker-card-meta">
+            <span class="badge"><span class="icon">📍</span>Liverpool</span>
+            <span class="badge"><span class="icon">★</span>4.9</span>
+          </div>
+          <button class="profile-btn" onclick="window.location.href='profile-maryam-s.html'">View Profile</button>
+        </div>
+      </div>
+      <div class="worker-card-modern" data-keywords="omid d carpenter leeds 4.8">
+        <div class="worker-card-img"><img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Omid%20D.%20Carpenter" alt="Omid D. avatar"></div>
+        <div class="worker-card-body">
+          <div class="worker-card-title">Omid D. <span class="worker-job">Carpenter</span></div>
+          <div class="worker-card-meta">
+            <span class="badge"><span class="icon">📍</span>Leeds</span>
+            <span class="badge"><span class="icon">★</span>4.8</span>
+          </div>
+          <button class="profile-btn" onclick="window.location.href='profile-omid-d.html'">View Profile</button>
+        </div>
+      </div>
+      <div class="worker-card-modern" data-keywords="fatemeh r gardener bristol 4.7">
+        <div class="worker-card-img"><img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Fatemeh%20R.%20Gardener" alt="Fatemeh R. avatar"></div>
+        <div class="worker-card-body">
+          <div class="worker-card-title">Fatemeh R. <span class="worker-job">Gardener</span></div>
+          <div class="worker-card-meta">
+            <span class="badge"><span class="icon">📍</span>Bristol</span>
+            <span class="badge"><span class="icon">★</span>4.7</span>
+          </div>
+          <button class="profile-btn" onclick="window.location.href='profile-fatemeh-r.html'">View Profile</button>
+        </div>
+      </div>
+      <div class="worker-card-modern" data-keywords="hossein b roofer sheffield 4.6">
+        <div class="worker-card-img"><img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Hossein%20B.%20Roofer" alt="Hossein B. avatar"></div>
+        <div class="worker-card-body">
+          <div class="worker-card-title">Hossein B. <span class="worker-job">Roofer</span></div>
+          <div class="worker-card-meta">
+            <span class="badge"><span class="icon">📍</span>Sheffield</span>
+            <span class="badge"><span class="icon">★</span>4.6</span>
+          </div>
+          <button class="profile-btn" onclick="window.location.href='profile-hossein-b.html'">View Profile</button>
+        </div>
+      </div>
+      <div class="worker-card-modern" data-keywords="leila n painter glasgow 4.9">
+        <div class="worker-card-img"><img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Leila%20N.%20Painter" alt="Leila N. avatar"></div>
+        <div class="worker-card-body">
+          <div class="worker-card-title">Leila N. <span class="worker-job">Painter</span></div>
+          <div class="worker-card-meta">
+            <span class="badge"><span class="icon">📍</span>Glasgow</span>
+            <span class="badge"><span class="icon">★</span>4.9</span>
+          </div>
+          <button class="profile-btn" onclick="window.location.href='profile-leila-n.html'">View Profile</button>
+        </div>
+      </div>
+      <div class="worker-card-modern" data-keywords="mohammad a handyman edinburgh 4.8">
+        <div class="worker-card-img"><img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Mohammad%20A.%20Handyman" alt="Mohammad A. avatar"></div>
+        <div class="worker-card-body">
+          <div class="worker-card-title">Mohammad A. <span class="worker-job">Handyman</span></div>
+          <div class="worker-card-meta">
+            <span class="badge"><span class="icon">📍</span>Edinburgh</span>
+            <span class="badge"><span class="icon">★</span>4.8</span>
+          </div>
+          <button class="profile-btn" onclick="window.location.href='profile-mohammad-a.html'">View Profile</button>
+        </div>
+      </div>
+      <div class="worker-card-modern" data-keywords="zahra j cleaner cardiff 4.7">
+        <div class="worker-card-img"><img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Zahra%20J.%20Cleaner" alt="Zahra J. avatar"></div>
+        <div class="worker-card-body">
+          <div class="worker-card-title">Zahra J. <span class="worker-job">Cleaner</span></div>
+          <div class="worker-card-meta">
+            <span class="badge"><span class="icon">📍</span>Cardiff</span>
+            <span class="badge"><span class="icon">★</span>4.7</span>
+          </div>
+          <button class="profile-btn" onclick="window.location.href='profile-zahra-j.html'">View Profile</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="how-it-works" id="how-it-works">
+    <h2>How it works</h2>
+    <div class="steps">
+      <div class="step">
+        <span class="step-icon">1</span>
+        <p>Tell us what you need</p>
+      </div>
+      <div class="step">
+        <span class="step-icon">2</span>
+        <p>Get free quotes</p>
+      </div>
+      <div class="step">
+        <span class="step-icon">3</span>
+        <p>Choose your professional</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="testimonials" id="testimonials">
+    <h2>What people are saying</h2>
+    <div class="testimonial-grid">
+      <div class="testimonial">
+        <p>“I had a fantastic experience both times!”</p>
+        <span>- Jayne</span>
+      </div>
+      <div class="testimonial">
+        <p>“One of the most honest experiences I've had on the web, ever!”</p>
+        <span>- Barend</span>
+      </div>
+      <div class="testimonial">
+        <p>“Excellent service. I was left with a wide range of offers. Brilliant work!”</p>
+        <span>- Sunny</span>
+      </div>
+      <div class="testimonial">
+        <p>“Very quickly, had 4 replies. The work was completed in a short time.”</p>
+        <span>- Mr C Heaps</span>
+      </div>
+      <div class="testimonial">
+        <p>“Quick and easy service. Got responses instantly and the next day the job had been completed.”</p>
+        <span>- Peter</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ESTIMATE MY PROJECT TAB -->
+  <section class="project-estimator-section" id="project-estimator" style="display:none;">
+    <h2>Estimate My Project</h2>
+    <div id="project-estimator-form-container"></div>
+  </section>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-logo">Job <span class="logo-accent">Bazaar</span></div>
+      <div class="footer-links">
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+        <a href="#">Terms</a>
+        <a href="#">Privacy</a>
+      </div>
+      <div class="footer-copy">&copy; 2025 Job Bazaar. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <script src="lang.js"></script>
+  <script src="projectEstimator.js"></script>
+  <script>
+    // Live filter for category tiles
+    const searchInput = document.getElementById('service-search');
+    const categoryGrid = document.getElementById('category-grid');
+    const tiles = Array.from(categoryGrid.getElementsByClassName('category-tile'));
+    searchInput.addEventListener('input', function() {
+      const val = this.value.trim().toLowerCase();
+      tiles.forEach(tile => {
+        const name = tile.getAttribute('data-name').toLowerCase();
+        tile.style.display = (!val || name.includes(val)) ? '' : 'none';
+      });
+    });
+    // Tab switching logic for estimator
+    document.getElementById('estimator-tab').addEventListener('click', function(e) {
+      e.preventDefault();
+      document.getElementById('project-estimator').style.display = 'block';
+      window.scrollTo({top: document.getElementById('project-estimator').offsetTop - 60, behavior: 'smooth'});
+    });
+  </script>
+  <!-- Start of OpenWidget (www.openwidget.com) code -->
+  <script>
+    window.__ow = window.__ow || {};
+    window.__ow.organizationId = "fbe92f4c-9aea-4a0e-9cc4-5e6d630bc397";
+    window.__ow.integration_name = "manual_settings";
+    window.__ow.product_name = "openwidget";   
+    ;(function(n,t,c){function i(n){return e._h?e._h.apply(null,n):e._q.push(n)}var e={_q:[],_h:null,_v:"2.0",on:function(){i(["on",c.call(arguments)])},once:function(){i(["once",c.call(arguments)])},off:function(){i(["off",c.call(arguments)])},get:function(){if(!e._h)throw new Error("[OpenWidget] You can't use getters before load.");return i(["get",c.call(arguments)])},call:function(){i(["call",c.call(arguments)])},init:function(){var n=t.createElement("script");n.async=!0,n.type="text/javascript",n.src="https://cdn.openwidget.com/openwidget.js",t.head.appendChild(n)}};!n.__ow.asyncInit&&e.init(),n.OpenWidget=n.OpenWidget||e}(window,document,[].slice))
+  </script>
+  <noscript>You need to <a href="https://www.openwidget.com/enable-javascript" rel="noopener nofollow">enable JavaScript</a> to use the communication tool powered by <a href="https://www.openwidget.com/" rel="noopener nofollow" target="_blank">OpenWidget</a></noscript>
+  <!-- End of OpenWidget code -->
+  <!-- OpenWidget test anchor for debugging -->
+  <div id="openwidget-chat-test" style="min-height:80px;border:2px dashed #1e90ff;margin:2rem auto;text-align:center;max-width:400px;">OpenWidget Chat Test Area</div>
+</body>
+</html> 
